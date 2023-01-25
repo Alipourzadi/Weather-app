@@ -4,7 +4,7 @@ import { CleandWeatherData, WeatherData } from "@/shared/types";
 const API_KEY_WEATHER = "9c2c27ee90057e167e9d0fc3833e658a";
 const API_KEY_TIMEZONE = "5c1ab67f45b0452aac8d9eb197bc53c7";
 
-const URL_BASE = "http://api.openweathermap.org/data/2.5";
+const URL_BASE = "https://api.openweathermap.org/data/2.5";
 
 async function getWeatherData(infoType: string, searchParams: any) {
   const url = new URL(URL_BASE + "/" + infoType);
