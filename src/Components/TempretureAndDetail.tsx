@@ -60,8 +60,8 @@ const TempretureAndDetail = ({
           </div>
           <div className="relative flex font-light items-center justify-center text-sm">
             <BsSpeedometer2 className="absolute right-full w-4 h-4 mr-1" />
-            Pressure:
-            <span className="font-medium ml-1">{`${pressure.toFixed()}km/h`}</span>
+            Press:
+            <span className="font-medium ml-1">{`${pressure.toFixed()}Pa`}</span>
           </div>
         </div>
       </div>
