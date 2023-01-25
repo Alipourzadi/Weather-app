@@ -1,17 +1,17 @@
-import React from "react";
+import { formatToLocalTime } from "@/services/weatherConditionServ";
 
-type Props = {};
-
-const TimeAndLocation = (props: Props) => {
+const TimeAndLocation = ({ weather }: any) => {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center my-6">
+      <div className="flex flex-col items-center justify-center text-center my-10">
         <p className="text-white text-xl font-extralight">
-          Tuesday,31 May 2022 | Localtime :12:46 PM
+          {formatToLocalTime(weather.dt, weather.timeZone)}
         </p>
       </div>
-      <div className="flex flex-col items-center justify-center ">
-        <p className="text-white text-3xl font-medium">Berlin, DE</p>
+      <div className="flex flex-col items-center justify-center">
+        <p className="text-white text-3xl font-medium my-0">
+          {`${weather.name}, ${weather.country}`}
+        </p>
       </div>
     </div>
   );

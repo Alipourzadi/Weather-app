@@ -1,13 +1,18 @@
-import React from "react";
 import { cities } from "@/shared/cities";
 
-type Props = {};
+// type Props = {
+//   setQuery: (value: string) => void;
+// };
 
-const TopButtons = (props: Props) => {
+const TopButtons = (props: any) => {
   return (
-    <div className="flex items-center justify-center gap-10 my-6">
+    <div className="flex items-center justify-center md:gap-10 gap-4 my-4">
       {cities.map((city) => (
-        <button key={city.id} className="text-white text-lg font-medium">
+        <button
+          key={city.id}
+          className="text-white md:text-lg md:font-medium"
+          onClick={() => props.setQuery({ q: city.title })}
+        >
           {city.title}
         </button>
       ))}
