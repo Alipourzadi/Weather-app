@@ -68,7 +68,7 @@ async function formatForcastWeather(data: any) {
   hourly = hourly.slice(1, 11).map((hour: any) => {
     return {
       title: formatToLocalTime(hour.dt, timeZone, "hh:mm a"),
-      temp: hour.main.temp,
+      temp: hour.main.temp-273,
       icon: hour.weather[0].icon,
     };
   });
